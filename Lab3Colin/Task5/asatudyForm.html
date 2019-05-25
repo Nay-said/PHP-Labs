@@ -1,0 +1,87 @@
+<<!DOCTYPE html>
+<head>
+<title>Study Form</title>
+</head>
+
+<body>
+	<form action="Form.php"hod="post">
+		<table align="center">
+
+			<tr><th colspan="2"><strong>Calcute my weekly study plan</strong></th></tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>
+					<select name="strTile' id="strTitle">
+						<option>Select a paper</option>
+						<option>IT6210-Internet Application Developmemt</option>
+						<option>IT6201-Communication</option>
+						<option>IT6203-Java Programming</option>
+					</select>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					Enter available credits for this paper (0 to 30)
+				</td>
+				
+				<td>
+					<input type="text" name="strCredit"/>
+				</td>
+				
+			</tr>
+
+			<tr>
+				<td>
+					Enter Number of weeks (exclude Study &amp; Exam week)
+				</td>
+
+				<td>
+					<input type="text" name="strWeeks"/>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					Select Programme of Study
+				</td>
+				
+				<td>
+						Certificate
+						<input type='radio' name='strProgramme' value='Certificate' id='strCertificate'/>
+						Diploma
+						<input type='radio' name='strProgramme' value='Diploma'  id='strDiploma'/>
+						Degree
+						<input type='radio' name='strProgramme' value='Degree'  id='strDegree'/>
+						Postgraduate
+						<input type='radio' name='strProgramme' value='Postgraduate'  id='strPostgraduate'/>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					Select Available Study Days
+				</td>
+
+				<td>
+					Mon<input type='checkbox' name='strMon' value='Monday'/>
+					Tue<input type='checkbox' name='strtue' value='Tuesday'/>
+					Wed<input type='checkbox' name='strwed' value='Wednesdy'/>
+					Thur<input type='checkbox' name='strThur' value='Thursday'/>
+					Fri<input type='checkbox' name='strFri' value='Friday'/>
+					Sat<input type='checkbox' name='strSat' value='Saturday'/>
+					Sun<input type='checkbox' name='strSun' value='Sunday'/>
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="2" alogn="center">
+					<input type="submit" nme="submit" value="Calculate Study Hours"/>
+				</td>
+			</tr>
+
+		</table>
+	</form>
+</body>
+
+</html>

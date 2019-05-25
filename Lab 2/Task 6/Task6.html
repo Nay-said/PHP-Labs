@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>Validating Data value format</title>
+		
+	<script>
+	function validate(){
+		var date=document.getElementById("date").value;
+		var pattern = /^\d{1,2}\/\d{1,2}\/\d{4}$/;
+		if(pattern.test(date)){
+			alert("enter date：" + date);
+			return true;
+		}
+		
+		alert("Invalid date format.Pls input in(dd/mm/yyyy) format!");
+		
+		return false;
+		
+		}
+	</script>
+	</head>
+
+	<body>
+		<h2>Validating Data value format </h2>
+		Enter Date ((dd/mm/yyyy)):
+		<input type="text" id="date"/>
+		<input type="submit" onclick="validate();"/>	
+	</body>
+</html>

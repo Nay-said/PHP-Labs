@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>Validating Data value format</title>
+		
+	<script>
+	function formValidate(){
+
+			var firstname = document.getElementById('firstname');
+			var add = document.getElementById('add');
+			var zip = document.getElementById('zip');
+			var city = document.getElementById('city');
+			var username = document.getElementById('username');
+			var email = document.getElementById('email');
+			//console.log(1111);
+		//return false;
+			if(isAlphabet(firstname,"pls enter only letter for your name")){
+			
+				if(isAlphanum(add,"pls Number and letter only for add")){
+					console.log(2);
+
+					if(isNum(zip,"pls enter a valid zip code")){
+						console.log(3);
+						if(madeSelection(city,"pls choose a city")){
+							console.log(4);
+							if(lengthRestriction(username,7,10)){
+								console.log(5);
+								if(emailValiator(email,"pls enter a valid")){
+									return true;
+								}
+							}
+						}
+					}
+				}
+			}
+			return false;
+		}
+		
+		function notEmpty(elem,msg){
+			if(elem.value.length==0){
+				alert(msg);
+				elem.focus();
+				return false;
+			}
+			return true;
+		}
+		
+		function isNum(elem,msg){
+			var e = /^[0-9]+$/;
+			if(elem.value.match(e)){
+				return true;
+			}else{
+				alert(msg);
+				elem.focus();
+				return false;
+			}
+		}
+		
+		function isAlphabet(elem,msg){
+			var e = /^[a-zA-Z]+$/;
+			console.log("isAlphabet");
+
+			if(elem.value.match(e)){
+				console.log("isAlphabet true");
+				return true;
+			}else{
+				console.log("isAlphabet else");
+				alert(msg);
+				elem.focus();
+				return false;
+			}
+			console.log("isAlphabet end");
+			return false;
+		}
+		
+		function isAlphanum(elem,msg){
+			var e = /^[0-9a-zA-Z]+$/;
+			if(elem.value.match(e)){
+				console.log("isAlphanum true");
+				return true;
+			}else{
+				alert(msg);
+				elem.focus();
+				return false;
+			}
+		}
+		
+		
+		function lengthRestriction(elem,min,max){
+			var ulnput = elem.value;
+			if(ulnput.length>=min&&ulnput.length<=max){
+				return true;
+			}else{
+				alert("pls enter betwwen"+min+"and"+max+"characters");
+				elem.focus();
+				return false;
+			}
+		}
+		
+		function madeSelection(elem,msg){
+		
+			if(elem.value == 0){
+				alert(msg);
+				elem.focus();
+				return false;
+			}else{
+				return true;
+			}
+		}
+		
+		function emailValiator(elem,msg){
+			var e = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-Z0-9]{2,4}$/;
+
+			if(elem.value.match(e)){
+				console.log("emailValiator true");
+				return true;
+			}else{
+				alert(msg);
+				elem.focus();
+				return false;
+			}
+		}
+	</script>
+	</head>
+
+	<body>
+		<form onsubmit='return formValidate()' >
+		firstname: <input type="text" id="firstname"/><br /><br />
+		address: <input type="text" id="add"/><br /><br />
+		zip: <input type="text" id="zip"/><br /><br />
+		city: <select id="city">
+				<option></option>
+				<option>auckland</option>
+				<option>christChurch</option>
+				<option>wellington</option>
+			</select><br /><br />
+			Username : <input type="text" id="username" /><br /><br />
+			Email: <input type="text" id="email" /><br /><br />
+			<input type="submit" value="check form" />
+	</body>
+</html>

@@ -1,0 +1,56 @@
+body
+
+div.heading {
+	background-color:#bbddff;
+	text-align:center;
+	font-family:arial;
+	padding:.2em;
+}
+
+p{
+	text-align:justify;
+	font-family:verdana;
+	
+}
+
+div.floated{
+	background-color:#eee;
+	font-size:1.8em;
+	padding:.2em;
+	margin-left:.5em;
+	margin-bottom:.5em;
+	    float: right;
+	text-align:right;
+	width:50%;
+	font-family: monotype corsiva;
+}
+
+img
+{
+	opacity:0.4;
+	filter:alpha(opacity=40)；
+}
+
+	div.section{
+		border:3px solid blue
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

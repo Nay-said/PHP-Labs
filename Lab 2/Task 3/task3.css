@@ -1,0 +1,63 @@
+body{
+}
+
+input{
+	background-color:#99ccff;
+	color:#black;
+	font-family:arial;
+	font-weight:bold;
+	font-size:12px;
+}
+
+
+textarea{
+	background-color:navy;
+	border:black 2px solid;
+	color:white;
+	font-family:arial;
+	font-size:12px;
+	font-weight:normal;
+}
+.altButtonFormat{
+	background-color:#c0c0c0;
+	font-family:verdana;
+	border:1px solid #000;
+	font-size:12px;
+	color:#778899;
+}
+
+.altTextField{
+	background-color:#ececec;
+	font-family:verdana;
+	font-size:12px;
+	color:#09c09c;
+	}
+	
+.radioStyle{
+	background-color:#ff0000;
+	border:1px solid #000;
+	font-family:verdana;
+	color:#000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
